@@ -1,0 +1,617 @@
+
+@media screen and (max-width: 1440px)
+	.headerContent
+		color: blue
+
+@media screen and (max-width: 1280px)
+	.headerContent
+		color: red
+
+@media screen and (max-width: 960px)
+	.headerContent
+		color: yellow
+
+@media screen and (max-width: 767px)
+	.headerContent
+		color: blue
+
+@media screen and (max-width: 480px)
+	.headerContent
+		color: blue
+
+
+@media screen and (max-width: 300px)
+	.headerContent
+		color: blue
+
+@import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
+
+
+@mixin lrcenter  //可以把經常重複使用的語法加入mixin
+	margin-left: auto
+	margin-right: auto
+
+*
+	position: relative //不會被特別定位
+
+
+.container
+	width: 100%  //定義整個寬度要滿版
+	background-color: #FFF
+	overflow: hidden  //overflow是用來遮住超出版面的物件 hidden是隱藏
+
+.navBar
+	width: 100%
+	height: 80px
+	background-color: black
+	opacity: 0.85
+	overflow: hidden
+	position: fixed //讓物件浮動浮動在指定位置
+	z-index: 10  //設定z軸，讓這個class的物件永遠在其他物件之上 圖層概念
+	text-align: center //讓文字置中
+	padding-top: 20px
+
+.topWrap
+	position: absolute //讓物件處在絕對定位，也就是下面設定的左邊距離及上邊距離，並且在下面的物件會跟他重疊
+	left: 30px
+	height: 50px
+	overflow: hidden
+	z-index: 15
+
+.hamburgerWrap
+	width: 50px
+	cursor: pointer //滑到class的鼠標樣式
+	img
+		width: 50px
+		display: block //顯示圖層 block是預設值 有none的預設時就要用這個語法
+
+.shareWrap
+	margin-top: 15px
+	margin-bottom: 15px
+
+.navMenu
+	ul
+		list-style-type: none //讓條列式前的符號消失
+	li
+		display: inline-block //欄位排版，讓他下面的物件可以跟他並排
+		vertical-align: middle //讓元素垂直置中
+		margin-left: 15px
+		margin-right: 15px
+		font-size: 24px
+		color: #fff
+		cursor: pointer
+	li:hover
+		color: red
+
+.logoWrap
+	position: absolute
+	img
+
+
+// header //
+
+
+.header
+	width: 100%
+	height: 800px
+
+
+.CoverImg
+	height: 100vh
+	background-position: center
+	background-repeat: no-repeat
+	background-size: cover
+
+
+
+// about //
+
+
+.about
+	width: 100%
+	height: 800px
+
+.about-content  //文字區塊
+	max-width: 815px //設定class的最大寬度
+	+lrcenter //這是sass的語法引用mixin的方式
+	position: relative
+	top: 285px
+	font-family: 'Noto Sans TC', sans-serif;
+	font-size: 18px
+	line-height: 30px		//設定文字行距
+	letter-spacing: 2px     //設定文字間距
+	text-align: center
+
+.about-image
+	position: relative
+	display: inline-block
+	bottom: -300px;
+	overflow: hidden
+	z-index: 5
+
+
+// eat //
+
+
+.eat
+	width: 100%
+	height: 800px
+
+
+.Pita
+	position: absolute
+	top: 269px
+	padding-bottom: 120px
+	overflow: hidden
+	img:hover
+			opacity: 0.9
+	//display: none
+
+.PitaArticle
+	width: 50%
+	height: 300px
+	position: absolute
+	left: 650px
+	bottom: 245px
+	margin-left: 70px
+	overflow: hidden
+	z-index: 15
+	background-size: 700px 300px
+	background-color: #023653
+	opacity: 0.9
+	display: none
+
+	h1
+		width: 40%
+		top: 10px
+		left: 80px
+		font-family: 'Noto Sans TC', sans-serif;
+		font-size: 28px
+		color: white
+		text-align: center
+		padding-bottom: 8px
+		border-bottom: 5px
+		border-bottom-style: solid //border邊界樣式 直接用border-style的話就是四個邊界都有效果
+		border-color: red
+	p
+		width: 80%
+		top: 10px
+		left: 80px
+		font-family: 'Noto Sans TC', sans-serif;
+		font-size: 17px
+		color: white
+		line-height: 30px
+		letter-spacing: 1.5px
+		text-align: left
+
+.PitaCarousel
+	width: 100%
+	position: absolute
+	right: 130px
+	top: 575px
+	//display: none
+
+.Sandwich
+	position: absolute
+	left: 720px
+	bottom: 228px
+	overflow: hidden
+	img:hover
+			opacity: 0.9
+	//display: none
+
+.SandwichArticle
+	width: 50%
+	height: 300px
+	position: absolute
+	right: 720px
+	bottom: 246px
+	margin-left: 70px
+	overflow: hidden
+	z-index: 3
+	background-size: 700px 300px
+	background-color: #023653
+	opacity: 0.9
+	display: none
+
+	h1
+		width: 40%
+		top: 10px
+		left: 60px
+		font-family: 'Noto Sans TC', sans-serif;
+		font-size: 28px
+		color: white
+		text-align: center
+		padding-bottom: 8px
+		border-bottom: 5px
+		border-bottom-style: solid //border邊界樣式 直接用border-style的話就是四個邊界都有效果
+		border-color: red
+	p
+		width: 80%
+		top: 10px
+		left: 60px
+		font-family: 'Noto Sans TC', sans-serif;
+		font-size: 17px
+		color: white
+		line-height: 30px
+		letter-spacing: 1.5px
+		text-align: left
+
+.SandwichCarousel
+	width: 100%
+	position: absolute
+	right: 130px
+	bottom: -491px
+	display: none
+
+.Pita-Img1Set
+	width: 31%
+	position: relative
+	display: inline-block
+	//margin: 0px 10px 10px 10px
+
+.Pita-Img1Name
+	position: relative
+	left: 110px
+	bottom: 20px
+	font-family: 'Noto Sans TC', sans-serif;
+	font-size: 18px
+
+.Pita-Img2Set
+	width: 31%
+	position: relative
+	display: inline-block
+
+.Pita-Img2Name
+	position: relative
+	left: 110px
+	bottom: 20px
+	font-family: 'Noto Sans TC', sans-serif;
+	font-size: 18px
+
+.Pita-Img3Set
+	width: 31%
+	position: relative
+	display: inline-block
+
+.Pita-Img3Name
+	position: relative
+	left: 110px
+	bottom: 20px
+	font-family: 'Noto Sans TC', sans-serif;
+	font-size: 18px
+
+.Pita-Img4Set
+	width: 31%
+	position: relative
+	left: 1300px
+	bottom: 360px
+	display: inline-block
+
+.Pita-Img4Name
+	position: relative
+	left: 110px
+	bottom: 20px
+	font-family: 'Noto Sans TC', sans-serif;
+	font-size: 18px
+
+.Pita-Img5Set
+	width: 31%
+	position: relative
+	left: 1300px
+	bottom: 360px
+	display: inline-block
+
+.Pita-Img5Name
+	position: relative
+	left: 110px
+	bottom: 20px
+	font-family: 'Noto Sans TC', sans-serif;
+	font-size: 18px
+
+
+.Sandwich-Img6Set
+	width: 31%
+	position: relative
+	display: inline-block
+	//margin: 0px 10px 10px 10px
+
+.Sandwich-Img6Name
+	position: relative
+	left: 110px
+	bottom: 20px
+	font-family: 'Noto Sans TC', sans-serif;
+	font-size: 18px
+
+.Sandwich-Img7Set
+	width: 31%
+	position: relative
+	display: inline-block
+
+.Sandwich-Img7Name
+	position: relative
+	left: 110px
+	bottom: 20px
+	font-family: 'Noto Sans TC', sans-serif;
+	font-size: 18px
+
+.Sandwich-Img8Set
+	width: 31%
+	position: relative
+	display: inline-block
+
+.Sandwich-Img8Name
+	position: relative
+	left: 110px
+	bottom: 20px
+	font-family: 'Noto Sans TC', sans-serif;
+	font-size: 18px
+
+.Sandwich-Img9Set
+	width: 31%
+	position: relative
+	left: 1300px
+	bottom: 360px
+	display: inline-block
+
+.Sandwich-Img9Name
+	position: relative
+	left: 110px
+	bottom: 20px
+	font-family: 'Noto Sans TC', sans-serif;
+	font-size: 18px
+
+.Sandwich-Img10Set
+	width: 31%
+	position: relative
+	left: 1300px
+	bottom: 360px
+	display: inline-block
+
+.Sandwich-Img10Name
+	position: relative
+	left: 110px
+	bottom: 20px
+	font-family: 'Noto Sans TC', sans-serif;
+	font-size: 18px
+
+
+// Active //
+
+
+.Active
+	width: 100%
+	height: 1080px
+
+.ActiveCarousel
+	top: 205px
+	//display: none
+
+.ActiveContent
+	position: relative
+	text-align: center
+	font-family: 'Noto Sans TC', sans-serif;
+	top: 200px
+	//display: none
+
+	h1
+		font-family: 'Noto Sans TC', sans-serif;
+		top: 30px
+		font-size: 24px
+
+
+	h2
+		top: 20px
+		font-size: 24px
+
+
+	p
+		width: 60%
+		top: 30px
+		left: 280px
+		line-height: 30px
+		font-size: 18px
+		letter-spacing: 1.5px
+
+
+// blog //
+
+
+.blog
+	display:inline-block
+	width: 100%
+	height: 1080px
+	background-color: #eee
+
+	bottom: 230px
+
+.blogContent
+	position: relative
+	text-align: center
+	font-family: 'Noto Sans TC', sans-serif;
+
+
+.ContentH1
+	top: 50px
+	font-size: 18px
+
+.ContentText
+	//position: absolute
+	width: 60%
+	top: 60px
+	left: 280px
+	font-size: 16px
+	line-height: 30px
+	letter-spacing:
+	z-index: 3
+
+
+.blogCarousel
+	position: absolute
+	width: 250%
+	top: 280px
+
+
+.CarouselImg1
+	display: inline-block
+	left: 80px
+
+	img
+		width: 55%
+	h1
+		font-size: 20px
+	p
+		width: 55%
+		font-size: 16px
+		letter-spacing: 1px
+		line-height: 20px
+
+
+.CarouselImg2
+	display: inline-block
+	right: 152px
+
+	img
+		width: 55%
+	h1
+		font-size: 20px
+	p
+		width: 55%
+		font-size: 16px
+		letter-spacing: 1px
+		line-height: 20px
+
+.CarouselImg3
+	display: inline-block
+	right: 382px
+	img
+		width: 55%
+	h1
+		font-size: 20px
+	p
+		width: 55%
+		font-size: 16px
+		letter-spacing: 1px
+		line-height: 20px
+
+.CarouselImg4
+	display: inline-block
+	img
+		width: 55%
+	h1
+		font-size: 20px
+	p
+		width: 55%
+		font-size: 16px
+		letter-spacing: 1px
+		line-height: 20px
+
+.CarouselImg5
+	display: inline-block
+	img
+		width: 55%
+	h1
+		font-size: 20px
+	p
+		width: 55%
+		font-size: 16px
+		letter-spacing: 1px
+		line-height: 20px
+
+
+// where //
+
+
+.Where
+	display: absolute
+	display: inline-block
+	text-align: center
+	font-family: 'Noto Sans TC', sans-serif;
+	width: 100%
+	height: 800px
+	bottom: 625px
+	overflow: hidden
+
+.Background
+	//width: 100%
+
+.Location
+	bottom: 1025px
+	right: 420px
+
+
+	img
+		width: 5%
+		padding-bottom: 20px
+
+	h1
+		font-size: 20px
+		color: #FFFFFF
+		letter-spacing: 0.5px
+		line-height: 20px
+	p
+		font-size: 12px
+		color: #FFFFFF
+		letter-spacing: 1px
+		line-height: 20px
+
+
+.Call
+	bottom: 1196px
+
+	img
+		width: 5%
+		padding-bottom: 20px
+
+	h1
+		font-size: 20px
+		color: #FFFFFF
+		letter-spacing: 0.5px
+		line-height: 20px
+	p
+		font-size: 12px
+		color: #FFFFFF
+		letter-spacing: 1px
+		line-height: 20px
+
+.Mail
+	bottom: 1367px
+	left: 450px
+
+	img
+		width: 5%
+		padding-bottom: 21px
+
+	h1
+		font-size: 20px
+		color: #FFFFFF
+	p
+		font-size: 12px
+		color: #FFFFFF
+
+.Map
+	display: inline-block
+	text-align: center
+	bottom: 1320px
+
+	img
+		width: 85%
+		height: 350px
+
+.CopyRight
+	display: inline-block
+	text-align: center
+	font-size: 12px
+	color: #ffffff
+	bottom: 1290px
+
+.Whiteicon
+	display: inline-block
+	bottom: 4800px
+	z-index: 10
+	img
+		width: 40px
+
+
+
+
