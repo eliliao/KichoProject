@@ -1,301 +1,370 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta name="viewport" content="width=device-width; initial-scale=1.0" maximum-scale="1.0; user-scalable=1"/>
+  <meta name="viewport" content="width=device-width" initial-scale="1.0" maximum-scale="1.0" user-scalable="1"/>
   <meta charset="UTF-8"/>
   <title>起丘 Kicho</title>
   <link href="css/main.css" rel="stylesheet" type="text/css">
   <script src="js/jquery-3.2.1.min.js"></script>
   <script src="js/slick.min.js"></script>
+  <!-- fullpage.js引入 -->
+  <script src="js/jquery.fullPage.min.js"></script>
   <script src="js/main.js"></script>
-
-  <style type=text/css>
-    .CoverImg{
-      /*position: absolute;*/
-    /*  height: 100vh;
-    background-image: url("images/do66914.jpg");*/
-    /*background-position: center;*/
-    /*background-repeat: no-repeat;*/
-    /*background-size: cover;*/
-  }
-</style>
 
 </head>
 <body>
-  <div class="container">
-    <div class="navBar">
-      <div class="topWrap">
-        <div class="hamburgerWrap">
-          <img src="images/hamburger.png" alt="">
-          <div class="shareWrap">
-            <img src="images/facebook.png" alt="">
-            <img src="images/link.png" alt="">
-          </div>
-          <div class="logoWrap">logo
-            <img src="" alt="">
-          </div>
+  <div class="navBar">
+    <div class="topWrap">
+      <div class="hamburgerWrap">
+        <img src="images/hamburger.png" alt="">
+        <div class="shareWrap">
+          <img src="images/facebook.png" alt="">
+          <img src="images/link.png" alt="">
+        </div>
+        <div class="logoWrap">logo
+          <img src="" alt="">
         </div>
       </div>
-      <div class="navMenu">
-        <ul>
-          <li>about</li>
-          <li>eat</li>
-          <li>active</li>
-          <li>blog</li>
-          <li>where</li>
-        </ul>
+    </div>
+    <div class="navMenu">
+      <ul>
+        <li><a href="index.html#2">關於我們</a></li>
+        <li><a href="index.html#3">吃什麼</a></li>
+        <li><a href="index.html#4">近期活動</a></li>
+        <li><a href="index.html#5">看點文章</a></li>
+        <li><a href="index.html#6">我們在哪</a></li>
+      </ul>
+    </div>
+    <div class="navMenuOrder">
+      <a href="index.html">
+        <p>線上訂購</p>
+      </a>
+    </div>
+  </div>
+  <div class="container" id="fullpage">
+    <div class="header section">
+      <div class="headerText">
+        <h1>123 asdasd asd</h1>
       </div>
+      <div class="headerImgwrap slick">
+        <div class="headerImg">
+          <img src="images/do66914.jpg" alt="">
+        </div>
+        <div class="headerImg">
+          <img src="images/do66914.jpg" alt="">
+        </div>
+        <div class="headerImg">
+          <img src="images/do66914.jpg" alt="">
+        </div>
+        <div class="headerImg">
+          <img src="images/do66914.jpg" alt="">
+        </div>
+      </div>
+
     </div>
-    <div class="CoverImg" style="background-image: url('images/do66914.jpg')">
-    </div>
-    <!--  <img src="images/do66914.jpg" style="height: 100vh;width: 100vw;"> -->
-    <div class="header">
-    </div>
-    <!-- about -->
-    <div class="about">
+
+<!-- about -->
+    <div class="about section">
       <div class="about-content">
         <p>口袋餅皮在製作過程中會出現隆起的自然反應，就像從平地慢慢浮現的小丘陵。我們稱呼這個過程為『 起丘 』。</p>
         <p>這是一間簡單又真誠的小小店舖，只專注滿足你早晨所需的精神與體力。如果你也需要為了每一天奮鬥，那我們的職責就是幫助你不軟爛 硬起來！</p>
         <p>所以你今天起丘了嗎？</p>
       </div>
-      <div class="about-image">
+      <div class="about-image autoplay">
+        <img src="images/cccc.png" alt="">
+        <img src="images/cccc.png" alt="">
+        <img src="images/cccc.png" alt="">
         <img src="images/cccc.png" alt="">
       </div>
-      <button class="btn btn-danger btn-block"></button>
-      <button class="btn-danger"></button>
-      <button class="btn-primary"></button>
     </div>
-    <!-- eat -->
-    <div class="eat">
-      <div class="Pita">
-        <img src="images/eatMenu1.png" alt="">
+
+<!-- eat -->
+
+    <div class="eat section">
+      <div class="mainProduct">
+        <div class="pitaWrap">
+          <div class="pitaImg">
+          </div>
+          <div class="pitaContent">
+            <h1>PITA餅 好帶又好吃!</h1>
+            <p>每個人都夢想每天早上能精神飽滿、神清氣爽地起床，但我們生活在節奏快速的環境中，朝九晚五的工作讓人疲憊不已，經過一整天的辛勞，你是否因生活的壓力、忙碌的步調而晚上翻來覆去無法入睡？</p>
+            <p>DailyView網路溫度計就用《KEYPO大數據關鍵引擎》調查各種助眠法，看看網友們最推的是哪些？如果你有這個困擾，不妨嘗試看看吧！</p>
+          </div>
+        </div>
+        <div class="sandwichWrap">
+          <div class="sandwichImg">
+          </div>
+          <div class="sandwichContent">
+            <h1>炭烤最美味！</h1>
+            <p>每個人都夢想每天早上能精神飽滿、神清氣爽地起床，但我們生活在節奏快速的環境中，朝九晚五的工作讓人疲憊不已，經過一整天的辛勞，你是否因生活的壓力、忙碌的步調而晚上翻來覆去無法入睡？</p>
+            <p>DailyView網路溫度計就用《KEYPO大數據關鍵引擎》調查各種助眠法，看看網友們最推的是哪些？如果你有這個困擾，不妨嘗試看看吧！</p>
+          </div>
+        </div>
+      </div>
+      <div class="productChild">
+        <div class="productStyle1 pitaSlick">
+          <div class="productBox">
+            <img src="images/foodpng1.png" alt="">
+            <p>星期一</p>
+          </div>
+          <div class="productBox">
+            <img src="images/foodpng2.png" alt="">
+            <p>星期二</p>
+          </div>
+          <div class="productBox">
+            <img src="images/foodpng3.png" alt="">
+            <p>星期三</p>
+          </div>
+          <div class="productBox">
+            <img src="images/foodpng4.png" alt="">
+            <p>星期四</p>
+          </div>
+          <div class="productBox">
+            <img src="images/foodpng5.png" alt="">
+            <p>星期五</p>
+          </div>
+        </div>
+        <div class="productStyle2 sandwichSlick">
+          <div class="productBox">
+            <img src="images/foodpng6.png" alt="">
+            <p>星期一</p>
+          </div>
+          <div class="productBox">
+            <img src="images/foodpng7.png" alt="">
+            <p>星期二</p>
+          </div>
+          <div class="productBox">
+            <img src="images/foodpng8.png" alt="">
+            <p>星期三</p>
+          </div>
+          <div class="productBox">
+            <img src="images/foodpng9.png" alt="">
+            <p>星期四</p>
+          </div>
+          <div class="productBox">
+            <img src="images/foodpng10.png" alt="">
+            <p>星期五</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<!-- Active -->
+
+    <div class="Active section">
+      <div class="ActiveWarp1">
+        <div class="ActiveImg Activeautoplay">
+          <img src="images/ActiveCarousel1.png" alt="">
+          <img src="images/ActiveCarousel1.png" alt="">
+          <img src="images/ActiveCarousel1.png" alt="">
+          <img src="images/ActiveCarousel1.png" alt="">
+        </div>
+        <div class="ActiveContent">
+          <h1>07/08 - 08/07</h1>
+          <h2>憑FB優惠券，外帶飲料半價起！</h2>
+          <p>為什麼要半價？為什麼要半價？為什麼要半價？為什麼要半價？為什麼要半價？為什麼要半價？</p>
+          <p> 為什麼要半價？為什麼要半價？為什麼要半價？為什麼要半價？為什麼要半價？為什麼要半價？為什麼要半價？為什麼要半價？為什麼要半價？</p>
+        </div>
+      </div>
+    </div>
+
+<!--       <div class="Pita" style="background-image: url('images/eatMenu1.png')">
       </div>
       <div class="PitaArticle">
         <h1>PITA餅 好帶又好吃!</h1>
         <p>每個人都夢想每天早上能精神飽滿、神清氣爽地起床，但我們生活在節奏快速的環境中，朝九晚五的工作讓人疲憊不已，經過一整天的辛勞，你是否因生活的壓力、忙碌的步調而晚上翻來覆去無法入睡？</p>
         <p>DailyView網路溫度計就用《KEYPO大數據關鍵引擎》調查各種助眠法，看看網友們最推的是哪些？如果你有這個困擾，不妨嘗試看看吧！</p>
       </div>
-      <div class="PitaCarousel">
-        <div class="Pita-Img1Set">
-          <div class="Pita-Img1">
-            <img src="images/foodpng1.png" alt="">
-          </div>
-          <div class="Pita-Img1Name">
-            <p>今天星期一</p>
-          </div>
-        </div>
-        <div class="Pita-Img2Set">
-          <div class="Pita-Img2">
-            <img src="images/foodpng2.png" alt="">
-          </div>
-          <div class="Pita-Img2Name">
-            <p>今天星期二</p>
-          </div>
-        </div>
-        <div class="Pita-Img3Set">
-          <div class="Pita-Img3">
-            <img src="images/foodpng3.png" alt="">
-          </div>
-          <div class="Pita-Img3Name">
-            <p>今天星期三</p>
-          </div>
-        </div>
-        <div class="Pita-Img4Set">
-          <div class="Pita-Img4">
-            <img src="images/foodpng4.png" alt="">
-          </div>
-          <div class="Pita-Img4Name">
-            <p>今天星期四</p>
-          </div>
-        </div>
-        <div class="Pita-Img5Set">
-          <div class="Pita-Img5">
-            <img src="images/foodpng5.png" alt="">
-          </div>
-          <div class="Pita-Img5Name">
-            <p>今天星期五</p>
-          </div>
-        </div>
-      </div>
-      <div class="Sandwich">
-        <img src="images/eatMenu2.png" alt="">
+      <div class="Sandwich" style= "background-image: url('images/eatMenu2.png')">
       </div>
       <div class="SandwichArticle">
         <h1>炭烤最美味！</h1>
         <p>每個人都夢想每天早上能精神飽滿、神清氣爽地起床，但我們生活在節奏快速的環境中，朝九晚五的工作讓人疲憊不已，經過一整天的辛勞，你是否因生活的壓力、忙碌的步調而晚上翻來覆去無法入睡？</p>
         <p>DailyView網路溫度計就用《KEYPO大數據關鍵引擎》調查各種助眠法，看看網友們最推的是哪些？如果你有這個困擾，不妨嘗試看看吧！</p>
       </div>
-      <div class="SandwichCarousel">
-        <div class="Sandwich-Img6Set">
-          <div class="Sandwich-Img6">
-            <img src="images/foodpng6.png" alt="">
+
+-->
+
+      <!--
+        <div class="PitaCarousel">
+          <div class="Pita-Img1" style="background-image: url('images/foodpng1.png')">
           </div>
+          <div class="Pita-Img1Name">
+            <p>今天星期一</p>
+          </div>
+          <div class="Pita-Img2" style="background-image: url('/images/foodpng2.png')">
+          </div>
+          <div class="Pita-Img2Name">
+            <p>今天星期二</p>
+          </div>
+          <div class="Pita-Img3" style="background-image: url('images/foodpng3.png')">
+          </div>
+          <div class="Pita-Img3Name">
+            <p>今天星期三</p>
+          </div>
+          <div class="Pita-Img4" style="background-image: url('images/foodpng4.png')">
+          </div>
+          <div class="Pita-Img4Name">
+            <p>今天星期四</p>
+          </div>
+          <div class="Pita-Img5" style="background-image: url('images/foodpng5.png')">
+          </div>
+          <div class="Pita-Img5Name">
+            <p>今天星期五</p>
+          </div>
+        </div> -->
+<!--       <div class="SandwichCarousel">
+          <div class="Sandwich-Img6" style="background-image: url('images/foodpng6.png')"></div>
           <div class="Sandwich-Img6Name">
             <p>禮拜一吃飯</p>
           </div>
-        </div>
-        <div class="Sandwich-Img7Set">
-          <div class="Sandwich-Img7">
-            <img src="images/foodpng7.png" alt="">
-          </div>
+          <div class="Sandwich-Img7" style="background-image: url('images/foodpng7.png')"></div>
           <div class="Sandwich-Img7Name">
             <p>禮拜二吃麵</p>
           </div>
-        </div>
-        <div class="Sandwich-Img8Set">
-          <div class="Sandwich-Img8">
-            <img src="images/foodpng8.png" alt="">
-          </div>
+          <div class="Sandwich-Img8" style="background-image: url('images/foodpng8.png')"></div>
           <div class="Sandwich-Img8Name">
             <p>禮拜三吃菜</p>
           </div>
-        </div>
-        <div class="Sandwich-Img9Set">
-          <div class="Sandwich-Img9">
-            <img src="images/foodpng9.png" alt="">
-          </div>
+          <div class="Sandwich-Img9" style="background-image: url('images/foodpng9.png')"></div>
           <div class="Sandwich-Img9Name">
             <p>禮拜四不吃</p>
           </div>
-        </div>
-        <div class="Sandwich-Img10Set">
-          <div class="Sandwich-Img10">
-            <img src="images/foodpng10.png" alt="">
-          </div>
+          <div class="Sandwich-Img10" style="background-image: url('images/foodpng7.png')"></div>
           <div class="Sandwich-Img10Name">
             <p>禮拜五運動</p>
           </div>
-        </div>
-      </div>
-    </div>
-    <!-- Active -->
-    <div class="Active">
-      <div class="ActiveCarousel">
-        <img src="images/ActiveCarousel1.png" alt="">
-      </div>
-      <div class="ActiveContent">
-        <h1>07/08 - 08/07</h1>
-        <h2>憑FB優惠券，外帶飲料半價起！</h2>
-        <p>為什麼要半價？為什麼要半價？為什麼要半價？為什麼要半價？為什麼要半價？為什麼要半價？為什麼要半價？為什麼要半價？為什麼要半價？為什麼要半價？為什麼要半價？為什麼要半價？為什麼要半價？為什麼要半價？為什麼要半價？</p>
-      </div>
-    </div>
-    <!-- blog -->
-    <div class="blog">
-      <div class="blogContent">
-        <div class="ContentH1">
+      </div> -->
+
+<!-- blog -->
+
+    <div class="blog section">
+      <div class="blogWarp">
+        <div class="blogContent">
           <h1>這是部落格標題</h1>
-        </div>
-        <div class="ContentText">
           <p>今天星期五今天星期五今天星期五今天星期五今天星期五今天星期五今天星期五今天星期五今天星期五今天星期五今天星期五今天星期五今天星期五今天星期五今天星期五今天星期五今天星期五今天星期五今天星期五今天星期五今天星期五今天星期五今天星期五</p>
         </div>
-      </div>
-      <div class="blogCarousel">
-        <div class="CarouselImg1">
-          <div>
-            <img src="images/blogimg1.jpg" alt="">
+        <div class="blogStyle1 productSlick">
+          <div class="blogBox1">
+            <img src="images/blogImg1.jpg" alt="">
+            <h1>10間超有名的小店！</h1>
+            <p>每個人都夢想每天早上能精神飽滿、神清氣爽地起床，但我們生活在節奏快速的環境中，朝九晚五的工作讓人疲憊不已，經過辛勞。</p>
           </div>
-          <div>
-            <h1>菜色好吃的秘訣原來要這樣做！</h1>
+          <div class="blogBox1">
+            <img src="images/blogImg2.jpg" alt="">
+            <h1>5間你沒吃過的人氣小吃！</h1>
+            <p>每個人都夢想每天早上能精神飽滿、神清氣爽地起床，但我們生活在節奏快速的環境中，朝九晚五的工作讓人疲憊不已，經過辛勞。</p>
           </div>
-          <div>
-            <p>第一張圖的簡介文第一張圖的簡介文第一張圖的簡介文第一張圖的簡介文第一張圖的簡介文</p>
+          <div class="blogBox1">
+            <img src="images/blogImg3.jpg" alt="">
+            <h1>今天的天氣很不錯</h1>
+            <p>每個人都夢想每天早上能精神飽滿、神清氣爽地起床，但我們生活在節奏快速的環境中，朝九晚五的工作讓人疲憊不已，經過辛勞。</p>
           </div>
-        </div>
-        <div class="CarouselImg2">
-          <div>
-            <img src="images/blogimg2.jpg" alt="">
+          <div class="blogBox1">
+            <img src="images/blogImg1.jpg" alt="">
+            <h1>明天好像會下雨</h1>
+            <p>每個人都夢想每天早上能精神飽滿、神清氣爽地起床，但我們生活在節奏快速的環境中，朝九晚五的工作讓人疲憊不已，經過辛勞。</p>
           </div>
-          <div>
-            <h1>盤點北部10間超美味隱藏小吃店</h1>
-          </div>
-          <div>
-            <p>第二張圖的簡介文第二張圖的簡介文第二張圖的簡介文第二張圖的簡介文第二張圖的簡介文</p>
-          </div>
-        </div>
-        <div class="CarouselImg3">
-          <div>
-            <img src="images/blogimg3.jpg" alt="">
-          </div>
-          <div>
-            <h1>你八成沒吃過的5種台灣道地美食</h1>
-          </div>
-          <div>
-            <p>第三張圖的簡介文第三張圖的簡介文第三張圖的簡介文第三張圖的簡介文第三張圖的簡介文</p>
-          </div>
-        </div>
-        <div class="CarouselImg4">
-          <div>
-            <img src="images/blogimg2.jpg" alt="">
-          </div>
-          <div>
-            <h1>第四張圖的標題</h1>
-          </div>
-          <div>
-            <p>第四張圖的簡介文第四張圖的簡介文第四張圖的簡介文第四張圖的簡介文第四張圖的簡介文</p>
-          </div>
-        </div>
-        <div class="CarouselImg5">
-          <div>
-            <img src="images/blogimg3.jpg" alt="">
-          </div>
-          <div>
-            <h1>第五張圖的標題</h1>
-          </div>
-          <div>
-            <p>第五張圖的簡介文第五張圖的簡介文第五張圖的簡介文第五張圖的簡介文第五張圖的簡介文</p>
+          <div class="blogBox1">
+            <img src="images/blogImg2.jpg" alt="">
+            <h1>星巴克一杯大冰美125</h1>
+            <p>每個人都夢想每天早上能精神飽滿、神清氣爽地起床，但我們生活在節奏快速的環境中，朝九晚五的工作讓人疲憊不已，經過辛勞。</p>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- Where -->
+<!-- Where -->
 
-    <div class="Where">
-      <div class="Background">
-        <img src="images/background.png" alt="">
-      </div>
-      <div class="Location">
-        <div>
-          <img src="images/placeholder.png" alt="">
+
+    <div class="where section">
+      <div class="whereWrap">
+        <div class="whereInfo">
+          <div class="infoBox">
+            <img src="images/placeholder.png" alt="">
+            <div class="infoMobile">
+              <h1>新北市板橋區新海路135巷37號8F</h1>
+              <p>鄰近江翠捷運站四號出口，附近有7-11</p>
+            </div>
+          </div>
+          <div class="infoBox">
+            <img src="images/phone-call.png" alt="">
+            <div class="infoMobile">
+              <h1>新北市板橋區新海路135巷37號8F</h1>
+              <p>鄰近江翠捷運站四號出口，附近有7-11</p>
+            </div>
+          </div>
+          <div class="infoBox">
+            <img src="images/envelope.png" alt="">
+            <div class="infoMobile">
+              <h1>新北市板橋區新海路135巷37號8F</h1>
+              <p>鄰近江翠捷運站四號出口，附近有7-11</p>
+            </div>
+          </div>
         </div>
-        <div>
-          <h1>新北市板橋區新海路135巷37號8F</h1>
+        <div class="whereMap" id="whereMap">
+          <img src="images/map.png" alt="">
         </div>
-        <div>
-          <p>鄰近江翠捷運站四號出口，附近有7-11</p>
-        </div>
-      </div>
-      <div class="Call">
-        <div>
-          <img src="images/phone-call.png" alt="">
-        </div>
-        <div>
-          <h1>02 2252-8886</h1>
-        </div>
-        <div>
-          <p>歡迎來電預約點餐</p>
-        </div>
-      </div>
-      <div class="Mail">
-        <div>
-          <img src="images/envelope.png" alt="">
-        </div>
-        <div>
-          <h1>eli_liao@Kicho.com.tw</h1>
-        </div>
-        <div>
-          <p>異業合作洽詢 其他合作邀約</p>
-        </div>
-      </div>
-      <div class="Map">
-        <img src="images/map.png" alt="">
-      </div>
-      <div class="CopyRight">
-        <p>
-          © COPYRIGHT 2017 "KICHO". ALL RIGHT RESERVE
-        </p>
       </div>
     </div>
+
+
+<!--
+    <div class="where section">
+      <div class="whereWarp">
+        <div class="LocationWarp">
+          <div class="Location">
+            <div>
+              <img src="images/placeholder.png">
+            </div>
+            <div>
+              <h1>新北市板橋區新海路135巷37號8F</h1>
+            </div>
+            <div>
+              <p>鄰近江翠捷運站四號出口，附近有7-11</p>
+            </div>
+          </div>
+        </div>
+        <div class="CallWarp">
+          <div class="Call">
+            <div>
+            <img src="images/phone-call.png">
+            </div>
+            <div>
+              <h1>02 2252-8886</h1>
+            </div>
+            <div>
+              <p>歡迎來電預約點餐</p>
+            </div>
+          </div>
+        </div>
+        <div class="MailWarp">
+          <div class="Mail">
+            <div>
+            <img src="images/envelope.png">
+            </div>
+            <div>
+              <h1>eli_liao@Kicho.com.tw</h1>
+            </div>
+            <div>
+              <p>異業合作洽詢 其他合作邀約</p>
+            </div>
+          </div>
+        </div>
+        <div class="MapWarp">
+          <div class="Map">
+            <img src="images/map.png">
+          </div>
+          <div class="CopyRight">
+            <p>© COPYRIGHT 2017 "KICHO". ALL RIGHT RESERVE</p>
+          </div>
+          <div class="wherebgImg">
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+
   </div>
 </body>
 </html>

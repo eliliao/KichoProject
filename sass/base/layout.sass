@@ -6,6 +6,11 @@
 @media screen and (max-width: 1280px)
 	.headerContent
 		color: red
+	.container
+		h1
+			font-size: 24px
+		p
+			font-size: 15px
 
 @media screen and (max-width: 960px)
 	.headerContent
@@ -14,11 +19,9 @@
 @media screen and (max-width: 767px)
 	.headerContent
 		color: blue
-
 @media screen and (max-width: 480px)
 	.headerContent
 		color: blue
-
 
 @media screen and (max-width: 300px)
 	.headerContent
@@ -31,14 +34,66 @@
 	margin-left: auto
 	margin-right: auto
 
+@mixin lrbackground
+	background-position: center
+	background-size: cover
+	background-repeat: no-repeat
+
+@mixin lrnorepeat
+	background-repeat: no-repeat
+
+@mixin lrtitle
+	font-family: 'Noto Sans TC', sans-serif;
+	font-size: 28px
+
+@mixin lrcontent
+	font-family: 'Noto Sans TC', sans-serif;
+	font-size: 17px
+	line-height: 30px
+	letter-spacing: 1.5px
+
+@mixin lrblogimg
+	width: 55%
+
+@mixin lrblogsmalltitle
+	font-size: 20px
+
+@mixin lrblogsmallcontent
+	width: 55%
+	font-size: 16px
+	letter-spacing: 1px
+	line-height: 20px
+
+@mixin lrfoodsize
+	width: 500px
+	height: 500px
+
+@mixin lrlocationtitle
+	font-size: 20px
+	color: #FFFFFF
+	letter-spacing: 0.5px
+	line-height: 20px
+
+@mixin lrlocationContent
+	font-size: 12px
+	color: #FFFFFF
+	letter-spacing: 1px
+	line-height: 20px
+
+
 *
 	position: relative //不會被特別定位
 
+body // 小心用 //
+	overflow: hidden
+	a
+		text-decoration: none
+		color: #fff
 
 .container
 	width: 100%  //定義整個寬度要滿版
 	background-color: #FFF
-	overflow: hidden  //overflow是用來遮住超出版面的物件 hidden是隱藏
+	  //overflow是用來遮住超出版面的物件 hidden是隱藏
 
 .navBar
 	width: 100%
@@ -80,538 +135,581 @@
 		font-size: 24px
 		color: #fff
 		cursor: pointer
+		a
+			transition: all .3s ease
 	li:hover
+		a
+			color: red
+
+.navMenuOrder
+	position: absolute
+	top: 15px
+	right: 100px
+	border-bottom-style: solid
+	border-color: red
+	cursor: pointer
+	p
+		color: #fff
+		margin: 15px 0px
+		font-size: 24px
+		transition: all .3s ease
+.navMenuOrder:hover
+	border: 0px
+	p
 		color: red
+
 
 .logoWrap
 	position: absolute
-	img
 
 
 // header //
 
-
 .header
 	width: 100%
-	height: 800px
-
-
-.CoverImg
 	height: 100vh
-	background-position: center
-	background-repeat: no-repeat
-	background-size: cover
-
-
-
+.headerImg
+	margin-top: 100px
+	width: 100%
+	height: 100vh
+	background-color: #FFF
+	img
+		width: 100%
+.headerText
+	position: absolute
+	text-align: center
+	width: 100%
+	+lrcenter
+	top: 35vh
+	z-index: 10
+	color: #fff
+	font-size: 75px
 // about //
-
 
 .about
 	width: 100%
-	height: 800px
-
-.about-content  //文字區塊
-	max-width: 815px //設定class的最大寬度
-	+lrcenter //這是sass的語法引用mixin的方式
-	position: relative
-	top: 285px
-	font-family: 'Noto Sans TC', sans-serif;
-	font-size: 18px
-	line-height: 30px		//設定文字行距
-	letter-spacing: 2px     //設定文字間距
+	height: 100vh
 	text-align: center
 
-.about-image
-	position: relative
-	display: inline-block
-	bottom: -300px;
-	overflow: hidden
-	z-index: 5
+.about-content  //文字區塊
+	+lrcenter //這是sass的語法引用mixin的方式
+	padding-top: 100px
+	max-width: 960px
+	font-family: 'Noto Sans TC', sans-serif;
+	font-size: 24px
+	line-height: 35px		//設定文字行距
+	letter-spacing: 1px     //設定文字間距
 
+.about-image
+	width: 100%
+	bottom: 0px
+	position: absolute
+	img
+		width: 100%
 
 // eat //
 
-
 .eat
+	display: inline-block
+	+lrcenter //這是sass的語法引用mixin的方式
 	width: 100%
-	height: 800px
-
-
-.Pita
-	position: absolute
-	top: 269px
-	padding-bottom: 120px
+	height: 100vh
 	overflow: hidden
-	img:hover
-			opacity: 0.9
-	//display: none
-
-.PitaArticle
-	width: 50%
-	height: 300px
+.mainProduct
+	width: 100%
+	display: flex
+	height: 100vh
+	margin-top: 100px
+.pitaWrap, .sandwichWrap
+	width: 50vw
+	cursor: pointer
+	left: 0vw
+	transition: all .3s ease
+.pitaImg, .sandwichImg
+	height: 100vh
+	background-size: cover
+	background-position: center
+	z-index: 2
+	transition: all .8s ease
+.pitaImg
+	background-image: url('../images/eatMenu1.png')
+.sandwichImg
+	background-image: url('../images/eatMenu2.png')
+.pitaContent, .sandwichContent
 	position: absolute
-	left: 650px
-	bottom: 245px
-	margin-left: 70px
-	overflow: hidden
-	z-index: 15
-	background-size: 700px 300px
-	background-color: #023653
-	opacity: 0.9
-	display: none
-
+	width: 100%
+	height: 50vh
+	z-index: 1
+	background-color: #14303a
+	color: white
+	top: 0px
+	left: 0vw
+	opacity: 0
+	transition: all .8s ease
+	transition: opacity .3s ease // 透明度 //
 	h1
-		width: 40%
-		top: 10px
-		left: 80px
-		font-family: 'Noto Sans TC', sans-serif;
 		font-size: 28px
-		color: white
-		text-align: center
-		padding-bottom: 8px
-		border-bottom: 5px
-		border-bottom-style: solid //border邊界樣式 直接用border-style的話就是四個邊界都有效果
-		border-color: red
+		padding-top: 75px
+		padding-left: 30px
+		padding-bottom: 25px
+
 	p
-		width: 80%
-		top: 10px
-		left: 80px
-		font-family: 'Noto Sans TC', sans-serif;
-		font-size: 17px
-		color: white
-		line-height: 30px
-		letter-spacing: 1.5px
-		text-align: left
+		font-size: 18px
+		padding: 0px 30px
+		line-height: 24px
+		letter-spacing: 2px
 
-.PitaCarousel
+.productChild
 	width: 100%
-	position: absolute
-	right: 130px
-	top: 575px
-	//display: none
+	height: 50vh
 
-.Sandwich
-	position: absolute
-	left: 720px
-	bottom: 228px
+.productStyle1, .productStyle2
+	width: 100%
+	height: 50vh
 	overflow: hidden
-	img:hover
-			opacity: 0.9
-	//display: none
-
-.SandwichArticle
-	width: 50%
-	height: 300px
+	bottom: -30vh
+	transition: all 1.2s ease
 	position: absolute
-	right: 720px
-	bottom: 246px
-	margin-left: 70px
-	overflow: hidden
-	z-index: 3
-	background-size: 700px 300px
-	background-color: #023653
-	opacity: 0.9
-	display: none
-
-	h1
-		width: 40%
-		top: 10px
-		left: 60px
-		font-family: 'Noto Sans TC', sans-serif;
-		font-size: 28px
-		color: white
-		text-align: center
-		padding-bottom: 8px
-		border-bottom: 5px
-		border-bottom-style: solid //border邊界樣式 直接用border-style的話就是四個邊界都有效果
-		border-color: red
+.productBox
+	margin-top: 30px
+	width: 20%
+	left: 10vw
+	text-align: center
+	img
+		width: 200px
 	p
-		width: 80%
-		top: 10px
-		left: 60px
-		font-family: 'Noto Sans TC', sans-serif;
-		font-size: 17px
-		color: white
-		line-height: 30px
-		letter-spacing: 1.5px
-		text-align: left
+		width: 100%
+		font-size: 16px
+		right: 10vw
+		font-weight: bold
 
-.SandwichCarousel
-	width: 100%
-	position: absolute
-	right: 130px
-	bottom: -491px
-	display: none
+// class add //
+.eatAdd-left
+	left: 50vw
+.eatAdd-right
+	left: -50vw
+.heightAdd   // Wrap的效果
+	height: 50vh
+.bottomAdd	 // 輪播圖的效果
+	bottom: 0px
+.contentAdd // 透明度 //
+	opacity: 1
+.xxoo
+	right: 100px
 
-.Pita-Img1Set
-	width: 31%
-	position: relative
-	display: inline-block
-	//margin: 0px 10px 10px 10px
-
-.Pita-Img1Name
-	position: relative
-	left: 110px
-	bottom: 20px
-	font-family: 'Noto Sans TC', sans-serif;
-	font-size: 18px
-
-.Pita-Img2Set
-	width: 31%
-	position: relative
-	display: inline-block
-
-.Pita-Img2Name
-	position: relative
-	left: 110px
-	bottom: 20px
-	font-family: 'Noto Sans TC', sans-serif;
-	font-size: 18px
-
-.Pita-Img3Set
-	width: 31%
-	position: relative
-	display: inline-block
-
-.Pita-Img3Name
-	position: relative
-	left: 110px
-	bottom: 20px
-	font-family: 'Noto Sans TC', sans-serif;
-	font-size: 18px
-
-.Pita-Img4Set
-	width: 31%
-	position: relative
-	left: 1300px
-	bottom: 360px
-	display: inline-block
-
-.Pita-Img4Name
-	position: relative
-	left: 110px
-	bottom: 20px
-	font-family: 'Noto Sans TC', sans-serif;
-	font-size: 18px
-
-.Pita-Img5Set
-	width: 31%
-	position: relative
-	left: 1300px
-	bottom: 360px
-	display: inline-block
-
-.Pita-Img5Name
-	position: relative
-	left: 110px
-	bottom: 20px
-	font-family: 'Noto Sans TC', sans-serif;
-	font-size: 18px
-
-
-.Sandwich-Img6Set
-	width: 31%
-	position: relative
-	display: inline-block
-	//margin: 0px 10px 10px 10px
-
-.Sandwich-Img6Name
-	position: relative
-	left: 110px
-	bottom: 20px
-	font-family: 'Noto Sans TC', sans-serif;
-	font-size: 18px
-
-.Sandwich-Img7Set
-	width: 31%
-	position: relative
-	display: inline-block
-
-.Sandwich-Img7Name
-	position: relative
-	left: 110px
-	bottom: 20px
-	font-family: 'Noto Sans TC', sans-serif;
-	font-size: 18px
-
-.Sandwich-Img8Set
-	width: 31%
-	position: relative
-	display: inline-block
-
-.Sandwich-Img8Name
-	position: relative
-	left: 110px
-	bottom: 20px
-	font-family: 'Noto Sans TC', sans-serif;
-	font-size: 18px
-
-.Sandwich-Img9Set
-	width: 31%
-	position: relative
-	left: 1300px
-	bottom: 360px
-	display: inline-block
-
-.Sandwich-Img9Name
-	position: relative
-	left: 110px
-	bottom: 20px
-	font-family: 'Noto Sans TC', sans-serif;
-	font-size: 18px
-
-.Sandwich-Img10Set
-	width: 31%
-	position: relative
-	left: 1300px
-	bottom: 360px
-	display: inline-block
-
-.Sandwich-Img10Name
-	position: relative
-	left: 110px
-	bottom: 20px
-	font-family: 'Noto Sans TC', sans-serif;
-	font-size: 18px
 
 
 // Active //
 
-
 .Active
+	display: inline-block
 	width: 100%
-	height: 1080px
-
-.ActiveCarousel
-	top: 205px
-	//display: none
-
+	height: 50vh
+	//margin-top: 100px
+	//overflow: hidden
+.ActiveWarp1
+	margin-top: 100px
 .ActiveContent
-	position: relative
 	text-align: center
-	font-family: 'Noto Sans TC', sans-serif;
-	top: 200px
-	//display: none
-
 	h1
-		font-family: 'Noto Sans TC', sans-serif;
-		top: 30px
-		font-size: 24px
-
-
-	h2
-		top: 20px
-		font-size: 24px
-
-
-	p
-		width: 60%
-		top: 30px
-		left: 280px
-		line-height: 30px
-		font-size: 18px
-		letter-spacing: 1.5px
-
+	margin-top: 70px
+	margin-bottom: 50px
 
 // blog //
 
-
 .blog
-	display:inline-block
+	display: inline-block
 	width: 100%
-	height: 1080px
-	background-color: #eee
+	height: 100vh
 
-	bottom: 230px
+.blogWarp
+	text-align: center
 
 .blogContent
-	position: relative
+	margin-top: 100px
+	h1
+		margin-top: 150px
+	p
+		display: inline-block
+		max-width: 800px
+		margin-top: 30px
+		font-size: 18px
+		line-height: 25px
+		letter-spacing: 1px
+
+.blogStyle1
+	margin-top: 30px
+
+.blogBox1
 	text-align: center
-	font-family: 'Noto Sans TC', sans-serif;
-
-
-.ContentH1
-	top: 50px
-	font-size: 18px
-
-.ContentText
-	//position: absolute
-	width: 60%
-	top: 60px
-	left: 280px
-	font-size: 16px
-	line-height: 30px
-	letter-spacing:
-	z-index: 3
-
-
-.blogCarousel
-	position: absolute
-	width: 250%
-	top: 280px
-
-
-.CarouselImg1
-	display: inline-block
-	left: 80px
 
 	img
-		width: 55%
+		display: inline-block
+		width: 80%
+
 	h1
-		font-size: 20px
+		display: inline-block
+		width: 80%
+		font-size: 24px
+		font-weight: bold
+		text-align: left
+		margin-bottom: 0px
 	p
-		width: 55%
-		font-size: 16px
+		display: inline-block
+		width: 80%
+		font-size: 18px
+		text-align: left
+		line-height: 25px
 		letter-spacing: 1px
-		line-height: 20px
-
-
-.CarouselImg2
-	display: inline-block
-	right: 152px
-
-	img
-		width: 55%
-	h1
-		font-size: 20px
-	p
-		width: 55%
-		font-size: 16px
-		letter-spacing: 1px
-		line-height: 20px
-
-.CarouselImg3
-	display: inline-block
-	right: 382px
-	img
-		width: 55%
-	h1
-		font-size: 20px
-	p
-		width: 55%
-		font-size: 16px
-		letter-spacing: 1px
-		line-height: 20px
-
-.CarouselImg4
-	display: inline-block
-	img
-		width: 55%
-	h1
-		font-size: 20px
-	p
-		width: 55%
-		font-size: 16px
-		letter-spacing: 1px
-		line-height: 20px
-
-.CarouselImg5
-	display: inline-block
-	img
-		width: 55%
-	h1
-		font-size: 20px
-	p
-		width: 55%
-		font-size: 16px
-		letter-spacing: 1px
-		line-height: 20px
 
 
 // where //
 
-
-.Where
-	display: absolute
-	display: inline-block
-	text-align: center
-	font-family: 'Noto Sans TC', sans-serif;
+.where
 	width: 100%
-	height: 800px
-	bottom: 625px
+	text-align: center
+	height: 100vh
+	background-image: url('../images/background.png')
+	background-position: center
+	background-size: cover
+	padding-top: 100px
+.whereWrap
+	width: 90%
+	+lrcenter
+.whereInfo
+	width: 100%
 	overflow: hidden
-
-.Background
-	//width: 100%
-
-.Location
-	bottom: 1025px
-	right: 420px
-
-
-	img
-		width: 5%
-		padding-bottom: 20px
-
-	h1
-		font-size: 20px
-		color: #FFFFFF
-		letter-spacing: 0.5px
-		line-height: 20px
-	p
-		font-size: 12px
-		color: #FFFFFF
-		letter-spacing: 1px
-		line-height: 20px
-
-
-.Call
-	bottom: 1196px
-
-	img
-		width: 5%
-		padding-bottom: 20px
-
-	h1
-		font-size: 20px
-		color: #FFFFFF
-		letter-spacing: 0.5px
-		line-height: 20px
-	p
-		font-size: 12px
-		color: #FFFFFF
-		letter-spacing: 1px
-		line-height: 20px
-
-.Mail
-	bottom: 1367px
-	left: 450px
-
-	img
-		width: 5%
-		padding-bottom: 21px
-
-	h1
-		font-size: 20px
-		color: #FFFFFF
-	p
-		font-size: 12px
-		color: #FFFFFF
-
-.Map
+	margin-top: 60px
+	margin-bottom: 60px
+	padding-top: 100px
+.infoBox
+	width: 30%
 	display: inline-block
-	text-align: center
-	bottom: 1320px
-
+	vertical-align: top
+	margin: 0px 15px
 	img
-		width: 85%
-		height: 350px
-
-.CopyRight
-	display: inline-block
-	text-align: center
-	font-size: 12px
-	color: #ffffff
-	bottom: 1290px
-
-.Whiteicon
-	display: inline-block
-	bottom: 4800px
-	z-index: 10
+		width: 70px
+		margin-bottom: 15px
+	h1
+		font-size: 24px
+		line-height: 24px
+		color: #fff
+	p
+		font-size: 17px
+		line-height: 24px
+		color: #fff
+.whereMap
+	width: 93%
+	+lrcenter
+	overflow: hidden
+	max-height: 40vh
 	img
-		width: 40px
+		width: 100%
+
+
+
+// .where
+// 	margin-top: 100px
+// 	width: 100%
+// 	height: 100vh
+// 	background-color: #000000
+// 	// background-image: url('../images/background.png')
+// 	vertical-align: middle
+// 	position: absolute
+// 	display: inline-block
+// // .wherebgImg
+// // 	background-image: url('../images/background.png')
+// // 	height: 100vh
+// // 	background-size: cover
+// // 	background-position: center
+// // 	//z-index: 1
+
+// .whereWarp
+// 	//display:block
+// 	top: 30px
+// 	width: 80%
+
+// .LocationWarp
+// 	left: 10%
+
+// .Location
+
+// 	img
+// 		width: 10%
+
+// 	h1
+// 		color: white
+// 		right: 90px
+// 		top: 20px
+// 		font-size: 22px
+
+// 	p
+// 		color: white
+// 		right: 65px
+// 		top: 20px
+// 		font-size: 16px
+
+// .CallWarp
+// 	left: 670px
+
+// .Call
+// 	bottom: 200px
+
+// 	img
+// 		width: 10%
+
+// 	h1
+// 		color: white
+// 		top: 12px
+// 		font-size: 22px
+
+// 	p
+// 		color: white
+// 		left: 2px
+// 		top: 14px
+// 		font-size: 16px
+
+// .MailWarp
+// 	left: 1150px
+
+// .Mail
+// 	bottom: 410px
+
+// 	img
+// 		width: 10%
+
+// 	h1
+// 		color: white
+// 		top: 15px
+// 		font-size: 22px
+
+// 	p
+// 		color: white
+// 		left: 2px
+// 		top: 14px
+// 		font-size: 16px
+
+// .MapWarp
+// 	// width: 100%
+// 	// height: 100vh
+
+// .Map
+// 	width: 800px
+// 	height: 800px
+// 	//height: 100vh
+
+// .CopyRight
+// 	color: white
+// 	font-size: 14px
+
+
+
+// .Pita
+// 	+lrbackground
+// 	position: absolute
+// 	width: 50%
+// 	height: 380px
+// 	//display: none
+
+// .PitaArticle
+// 	position: absolute
+// 	left: 50%
+// 	width: 50%
+// 	height: 380px
+// 	background-size: 700px 300px
+// 	background-color: #023653
+// 	opacity: 0.9
+// 	//display: none
+
+// 	h1
+// 		width: 40%
+// 		top: 60px
+// 		left: 80px
+// 		+lrtitle
+// 		color: white
+// 		text-align: center
+// 		padding-bottom: 8px
+// 		border-bottom: 5px
+// 		border-bottom-style: solid //border邊界樣式 直接用border-style的話就是四個邊界都有效果
+// 		border-color: red
+// 	p
+// 		width: 80%
+// 		top: 60px
+// 		left: 80px
+// 		+lrcontent
+// 		color: white
+// 		text-align: left
+
+// .Pita:hover
+// 		opacity: 0.9
+
+// .Sandwich
+// 	position: absolute
+// 	+lrbackground
+// 	left: 50%
+// 	width: 50%
+// 	height: 380px
+// 	//display: none
+
+// .Sandwich:hover
+// 		opacity: 0.9
+
+// .SandwichArticle
+// 	position: absolute
+// 	width: 50%
+// 	height: 380px
+// 	background-size: 700px 300px
+// 	background-color: #023653
+// 	opacity: 0.9
+// 	display: none
+
+// 	h1
+// 		width: 40%
+// 		top: 60px
+// 		left: 80px
+// 		+lrtitle
+// 		color: white
+// 		text-align: center
+// 		padding-bottom: 8px
+// 		border-bottom: 5px
+// 		border-bottom-style: solid //border邊界樣式 直接用border-style的話就是四個邊界都有效果
+// 		border-color: red
+// 	p
+// 		width: 80%
+// 		top: 60px
+// 		left: 80px
+// 		+lrcontent
+// 		color: white
+// 		text-align: left
+
+// .PitaCarousel
+// 	position: absolute
+// 	display: inline-block
+// 	//display: none
+
+// .Pita-Img1
+// 	bottom: 90px
+// 	left: 80px
+// 	+lrfoodsize
+// 	+lrnorepeat
+
+// .Pita-Img1Name
+// 	bottom: 320px
+// 	left: 210px
+// 	+lrcontent
+
+// .Pita-Img2
+// 	bottom: 655px
+// 	left: 570px
+// 	+lrfoodsize
+// 	+lrnorepeat
+
+// .Pita-Img2Name
+// 	bottom: 883px
+// 	left: 680px
+// 	+lrcontent
+
+// .Pita-Img3
+// 	bottom: 1210px
+// 	left: 1050px
+// 	+lrfoodsize
+// 	+lrnorepeat
+
+// .Pita-Img3Name
+// 	bottom: 1448px
+// 	left: 1150px
+// 	+lrcontent
+
+// .Pita-Img4
+// 	bottom: 1780px
+// 	left: 1500px
+// 	+lrfoodsize
+// 	+lrnorepeat
+
+// .Pita-Img4Name
+// 	bottom: 2012px
+// 	left: 1610px
+// 	+lrcontent
+
+// .Pita-Img5
+// 	bottom: 2330px
+// 	left: 1950px
+// 	+lrfoodsize
+// 	+lrnorepeat
+
+// .Pita-Img5Name
+// 	bottom: 2572px
+// 	left: 2060px
+// 	+lrcontent
+
+// .SandwichCarousel
+// 	position: absolute
+// 	display: inline-block
+// 	display: none
+
+// .Sandwich-Img6
+// 	bottom: 90px
+// 	left: 80px
+// 	+lrfoodsize
+// 	+lrnorepeat
+
+// .Sandwich-Img6Name
+// 	bottom: 320px
+// 	left: 210px
+// 	+lrcontent
+
+// .Sandwich-Img7
+// 	bottom: 655px
+// 	left: 570px
+// 	+lrfoodsize
+// 	+lrnorepeat
+
+// .Sandwich-Img7Name
+// 	bottom: 883px
+// 	left: 680px
+// 	+lrcontent
+
+// .Sandwich-Img8
+// 	bottom: 1210px
+// 	left: 1050px
+// 	+lrfoodsize
+// 	+lrnorepeat
+
+// .Sandwich-Img8Name
+// 	bottom: 1448px
+// 	left: 1150px
+// 	+lrcontent
+
+// .Sandwich-Img9
+// 	bottom: 1780px
+// 	left: 1500px
+// 	+lrfoodsize
+// 	+lrnorepeat
+
+// .Sandwich-Img9Name
+// 	bottom: 2012px
+// 	left: 1610px
+// 	+lrcontent
+
+// .Sandwich-Img10
+// 	bottom: 2330px
+// 	left: 1950px
+// 	+lrfoodsize
+// 	+lrnorepeat
+
+// .Sandwich-Img10Name
+// 	bottom: 2572px
+// 	left: 2060px
+// 	+lrcontent
 
 
 
 
+
+
+// slick //
+.slick
+	display: block
+.slick-slide
+	&:focus, a
+		outline: none
