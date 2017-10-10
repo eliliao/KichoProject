@@ -773,21 +773,17 @@ body a {
   color: #fff;
 }
 
-.container {
-  width: 100%;
-  background-color: #FFF;
-}
-
 .navBar {
   width: 100%;
-  height: 80px;
+  height: 60px;
   background-color: black;
   opacity: 0.85;
   overflow: hidden;
   position: fixed;
   z-index: 10;
   text-align: center;
-  padding-top: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
 .topWrap {
@@ -813,6 +809,11 @@ body a {
   margin-bottom: 15px;
 }
 
+.navMenu {
+  position: relative;
+  right: 20px;
+}
+
 .navMenu ul {
   list-style-type: none;
 }
@@ -823,7 +824,7 @@ body a {
   margin-left: 15px;
   margin-right: 15px;
   font-size: 24px;
-  color: #fff;
+  color: #a1a1a1;
   cursor: pointer;
 }
 
@@ -839,7 +840,7 @@ body a {
 
 .navMenuOrder {
   position: absolute;
-  top: 15px;
+  top: 0px;
   right: 100px;
   border-bottom-style: solid;
   border-color: red;
@@ -847,7 +848,7 @@ body a {
 }
 
 .navMenuOrder p {
-  color: #fff;
+  color: #a1a1a1;
   margin: 15px 0px;
   font-size: 24px;
   -webkit-transition: all .3s ease;
@@ -873,7 +874,7 @@ body a {
 }
 
 .headerImg {
-  margin-top: 100px;
+  margin-top: 70px;
   width: 100%;
   height: 100vh;
   background-color: #FFF;
@@ -889,7 +890,7 @@ body a {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  top: 35vh;
+  top: 30vh;
   z-index: 10;
   color: #fff;
   font-size: 75px;
@@ -904,7 +905,7 @@ body a {
 .about-content {
   margin-left: auto;
   margin-right: auto;
-  padding-top: 100px;
+  padding-top: 125px;
   max-width: 960px;
   font-family: 'Noto Sans TC', sans-serif;
   font-size: 24px;
@@ -938,7 +939,7 @@ body a {
   display: -ms-flexbox;
   display: flex;
   height: 100vh;
-  margin-top: 100px;
+  margin-top: 70px;
 }
 
 .pitaWrap, .sandwichWrap {
@@ -1009,7 +1010,7 @@ body a {
   width: 100%;
   height: 50vh;
   overflow: hidden;
-  bottom: -30vh;
+  bottom: -35vh;
   -webkit-transition: all 1.2s ease;
   -o-transition: all 1.2s ease;
   transition: all 1.2s ease;
@@ -1062,16 +1063,24 @@ body a {
   display: inline-block;
   width: 100%;
   height: 50vh;
+  background-color: #343331;
 }
 
 .ActiveWarp1 {
-  margin-top: 100px;
+  margin-top: 70px;
 }
 
 .ActiveContent {
+  margin-top: 50px;
+  position: absolute;
   text-align: center;
-  margin-top: 70px;
-  margin-bottom: 50px;
+  width: 100%;
+  color: #FFF;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 26px;
+  font-size: 26px;
+  font-size: 18px;
 }
 
 .blog {
@@ -1085,7 +1094,7 @@ body a {
 }
 
 .blogContent {
-  margin-top: 100px;
+  margin-top: 70px;
 }
 
 .blogContent h1 {
@@ -1114,6 +1123,10 @@ body a {
   width: 80%;
 }
 
+.blogBox1 img:hover {
+  opacity: 0.7;
+}
+
 .blogBox1 h1 {
   display: inline-block;
   width: 80%;
@@ -1121,6 +1134,11 @@ body a {
   font-weight: bold;
   text-align: left;
   margin-bottom: 0px;
+  color: black;
+}
+
+.blogBox1 h1:hover {
+  color: #065c9b;
 }
 
 .blogBox1 p {
@@ -1130,6 +1148,11 @@ body a {
   text-align: left;
   line-height: 25px;
   letter-spacing: 1px;
+  color: black;
+}
+
+.blogBox1 p:hover {
+  color: #065c9b;
 }
 
 .where {
@@ -1161,6 +1184,7 @@ body a {
   display: inline-block;
   vertical-align: top;
   margin: 0px 15px;
+  margin-top: 60px;
 }
 
 .infoBox img {

@@ -1,0 +1,323 @@
+
+@media screen and (max-width: 1440px)
+	.headerContent
+		color: blue
+
+@media screen and (max-width: 1280px)
+	.headerContent
+		color: red
+	.container
+		h1
+			font-size: 24px
+		p
+			font-size: 15px
+
+@media screen and (max-width: 960px)
+	.headerContent
+		color: yellow
+
+@media screen and (max-width: 767px)
+	.headerContent
+		color: blue
+@media screen and (max-width: 480px)
+	.headerContent
+		color: blue
+
+@media screen and (max-width: 300px)
+	.headerContent
+		color: blue
+
+@import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
+
+
+@mixin lrcenter  //可以把經常重複使用的語法加入mixin
+	margin-left: auto
+	margin-right: auto
+
+
+*
+body
+
+	a
+		text-decoration: none
+		color: #a1a1a1
+
+
+.navBar
+	width: 100%
+	height: 60px
+	background-color: black
+	opacity: 0.85
+	overflow: hidden
+	position: fixed //讓物件浮動浮動在指定位置
+	z-index: 10  //設定z軸，讓這個class的物件永遠在其他物件之上 圖層概念
+	text-align: center //讓文字置中
+	padding-top: 5px
+	padding-bottom: 5px
+
+.topWrap
+	position: absolute //讓物件處在絕對定位，也就是下面設定的左邊距離及上邊距離，並且在下面的物件會跟他重疊
+	left: 30px
+	height: 50px
+	overflow: hidden
+	z-index: 15
+
+.hamburgerWrap
+	width: 50px
+	cursor: pointer //滑到class的鼠標樣式
+	img
+		width: 50px
+		display: block //顯示圖層 block是預設值 有none的預設時就要用這個語法
+
+.shareWrap
+	margin-top: 15px
+	margin-bottom: 15px
+
+.navMenu
+	position: relative
+	right: 20px
+	ul
+		list-style-type: none //讓條列式前的符號消失
+	li
+		display: inline-block //欄位排版，讓他下面的物件可以跟他並排
+		vertical-align: middle //讓元素垂直置中
+		margin-left: 15px
+		margin-right: 15px
+		font-size: 24px
+		color: #a1a1a1
+		cursor: pointer
+		a
+			transition: all .3s ease
+	li:hover
+		a
+			color: red
+
+.navMenuOrder
+	position: absolute
+	top: 0px
+	right: 100px
+	border-bottom-style: solid
+	border-color: red
+	cursor: pointer
+	p
+		color: #a1a1a1
+		margin: 15px 0px
+		font-size: 24px
+		transition: all .3s ease
+.navMenuOrder:hover
+	border: 0px
+	p
+		color: red
+
+.logoWrap
+	position: absolute
+
+// 文章首圖 //
+
+.container
+	width: 100%  //定義整個寬度要滿版
+	background-color: #FFF
+	overflow: hidden //是用來遮住超出版面的物件 hidden是隱藏
+
+.header //首圖框架
+	+lrcenter //畫面置中只要這四行
+	width: 100% //畫面置中只要這四行
+	padding-top: 70px
+	margin-top: 50px
+
+.headerText  //圖上文字
+	position: absolute
+	display: inline-block
+	text-align: center
+	margin-top: 130px
+	left: 17vw
+	font-size: 35px
+	color: #fff
+	text-shadow: 3px 3px 3px #1a1a1a
+
+.headerImg //首圖
+	+lrcenter
+	overflow: hidden
+	max-width: 90%
+	max-height: 50vh
+	img
+		width: 100%
+
+.article //下層文章框架
+	width: 100%
+	height: 100vh
+	position: absolute
+	display: inline-block
+
+
+.articleWarp //
+	width: 100%
+	//margin: 0px 25px
+
+.articleBox
+	position: absolute
+	vertical-align: center
+	width: 65%
+	height: 300vh
+	left: 33%
+	margin-top: 0px
+	margin-bottom: 50px
+	background-color: #fff
+	//box-shadow: 15px 15px 50px gray
+	overflow: hidden
+
+.articleText
+	+lrcenter
+	max-width: 80%
+	text-align: center
+	padding: 46px 60px
+
+
+	h1
+		width: 100%
+		font-size: 28px
+		padding-bottom: 20px
+		border-bottom-style: solid
+		border-width: 2px
+		border-color: #ccc
+		color: #1a1a1a
+
+
+	p
+		text-align: left
+		width: 100%
+		padding-top: 30px
+		font-size: 22px
+		color: #1a1a1a
+		line-height: 35px
+		letter-spacing: 2px
+
+	img
+		padding-top: 20px
+		width: 100%
+
+
+.sideWarp //側欄選單
+	position: relative
+	width: 100%
+	padding-top: 145px
+	left: 3%
+	// position: fixed
+	// top: 150px
+
+
+.socialicon
+	+lrcenter
+	position: relative
+	left: 90px
+	bottom: 20px
+
+	/* Style all font awesome icons */
+.fa
+	display: inline-block
+	padding: 10px
+	top: 50px
+	margin: 0px 10px
+	font-size: 20px
+	width: 20px
+	text-align: center
+	text-decoration: none
+	border-radius: 50%
+	border-style: solid
+
+/* Add a hover effect if you want */
+.fa:hover
+    opacity: 0.7
+
+/* Set a specific color for each brand */
+
+/* Facebook */
+.fa-facebook
+    background: #3B5998
+    color: white
+
+/* Instagram */
+.fa-instagram
+  background: #125688
+  color: white
+
+/* Google */
+.fa-google
+  background: #dd4b39
+  color: white
+
+/* Pinterest */
+.fa-pinterest
+  background: #cb2027
+  color: white
+
+
+/* Style all font awesome icons */
+
+
+
+.sideH1
+	position: absolute
+	text-align: center
+	left: 70px
+	width: 315px
+	font-size: 22px
+	color: #000000
+	//border-style: solid
+	border-width: 3px 3px
+	border-color: #ddd
+	//background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
+	background-color: #f6f6f6
+.sideBox
+	position: absolute
+	vertical-align: center
+	width: 22%
+	height: 100vh
+	margin-top: 100px
+	margin-bottom: 50px
+	left: 70px
+	//box-shadow: 3px 3px 12px gray
+	padding: 3px
+	overflow: hidden
+
+.sideBoxArticle
+	// position: absolute
+	text-align: left
+	overflow: hidden
+	padding-left: 15px
+	padding-bottom: 32px
+
+	img
+		// display: inline-block
+		width: 120px
+		padding-top: 35px
+	h1
+		position: relative
+		display: inline-block
+		left: 150px
+		bottom: 140px
+		font-size: 16px
+		font-weight: bold
+		border-bottom-style: solid
+		border-width: 2px
+	p
+		position: relative
+		display: inline-block
+		max-width: 125px
+		left: 95px
+		bottom: 80px
+		font-size: 14px
+
+
+
+
+
+
+
+
+
+
+
+
+
+

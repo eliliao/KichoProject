@@ -85,12 +85,21 @@ $(function(){
 	  autoplaySpeed: 2000,
 	});
 
+	$('.Blogautoplay').slick({
+	  slidesToShow: 3,
+	  slidesToScroll: 1,
+	  autoplay: true,
+	  autoplaySpeed: 2000,
+	  vertical: true,
+	  verticalSwiping: true,
+	});
+
 
 	$('#fullpage').fullpage({
 		//Navigation
 		menu: '#menu',
 		lockAnchors: false	,
-		anchors:['1', '2', '3', '4', '5', '6'],
+		anchors:['home', 'about', 'eat', 'active', 'blog', 'where'],
 		navigation: false,
 		navigationPosition: 'right',
 		navigationTooltips: ['firstSlide', 'secondSlide'],
