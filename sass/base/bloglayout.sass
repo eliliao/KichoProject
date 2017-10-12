@@ -35,6 +35,9 @@
 	margin-right: auto
 
 
+.slick-vertical .slick-slide
+	height: 110px !important
+
 *
 body
 
@@ -96,14 +99,16 @@ body
 	position: absolute
 	top: 0px
 	right: 100px
-	border-bottom-style: solid
-	border-color: red
+	//border-bottom-style: solid
+	//border-color: red
 	cursor: pointer
 	p
 		color: #a1a1a1
-		margin: 15px 0px
+		margin: 22px 0px
 		font-size: 24px
+		color: orange
 		transition: all .3s ease
+
 .navMenuOrder:hover
 	border: 0px
 	p
@@ -120,8 +125,8 @@ body
 	overflow: hidden //是用來遮住超出版面的物件 hidden是隱藏
 
 .header //首圖框架
-	+lrcenter //畫面置中只要這四行
-	width: 100% //畫面置中只要這四行
+	+lrcenter
+	width: 100%
 	padding-top: 70px
 	margin-top: 50px
 

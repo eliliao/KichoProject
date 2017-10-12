@@ -760,6 +760,22 @@ template {
   }
 }
 
+body {
+  font-family: 'Noto Sans TC', sans-serif;
+}
+
+.slick-prev.slick-arrow {
+  margin-left: 50px;
+}
+
+.slick-next.slick-arrow {
+  margin-right: 50px;
+}
+
+.slick-vertical .slick-slide {
+  height: 130px !important;
+}
+
 * {
   position: relative;
 }
@@ -826,6 +842,7 @@ body a {
   font-size: 24px;
   color: #a1a1a1;
   cursor: pointer;
+  font-family: 'Noto Sans TC', sans-serif;
 }
 
 .navMenu li a {
@@ -842,18 +859,18 @@ body a {
   position: absolute;
   top: 0px;
   right: 100px;
-  border-bottom-style: solid;
-  border-color: red;
   cursor: pointer;
 }
 
 .navMenuOrder p {
   color: #a1a1a1;
-  margin: 15px 0px;
+  margin: 22px 0px;
   font-size: 24px;
+  color: orange;
   -webkit-transition: all .3s ease;
   -o-transition: all .3s ease;
   transition: all .3s ease;
+  font-family: 'Noto Sans TC', sans-serif;
 }
 
 .navMenuOrder:hover {
@@ -894,12 +911,11 @@ body a {
   z-index: 10;
   color: #fff;
   font-size: 75px;
+  font-family: 'Noto Sans TC', sans-serif;
 }
 
-.about {
-  width: 100%;
-  height: 100vh;
-  text-align: center;
+.headerText h1 {
+  text-shadow: 3px 3px 30px #333;
 }
 
 .about-content {
@@ -923,22 +939,27 @@ body a {
   width: 100%;
 }
 
+.text-center {
+  text-align: center;
+}
+
+.full-page {
+  width: 100%;
+  height: 100vh;
+}
+
 .eat {
   display: inline-block;
   margin-left: auto;
   margin-right: auto;
-  width: 100%;
-  height: 100vh;
   overflow: hidden;
 }
 
 .mainProduct {
-  width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  height: 100vh;
   margin-top: 70px;
 }
 
@@ -963,10 +984,21 @@ body a {
 
 .pitaImg {
   background-image: url("../images/eatMenu1.png");
+  -webkit-box-shadow: inset 0px 0px 40px black;
+  box-shadow: inset 0px 0px 40px black;
+}
+
+.pitaImg:hover {
+  opacity: 0.8;
 }
 
 .sandwichImg {
-  background-image: url("../images/eatMenu2.png");
+  background-image: url("../images/eatMenu1.png");
+  opacity: 0.9;
+}
+
+.sandwichImg:hover {
+  opacity: 0.8;
 }
 
 .pitaContent, .sandwichContent {
@@ -992,6 +1024,7 @@ body a {
   padding-top: 75px;
   padding-left: 30px;
   padding-bottom: 25px;
+  font-family: 'Noto Sans TC', sans-serif;
 }
 
 .pitaContent p, .sandwichContent p {
@@ -999,6 +1032,7 @@ body a {
   padding: 0px 30px;
   line-height: 24px;
   letter-spacing: 2px;
+  font-family: 'Noto Sans TC', sans-serif;
 }
 
 .productChild {
@@ -1017,22 +1051,26 @@ body a {
   position: absolute;
 }
 
-.productBox {
+.productBox1, .productBox2, .productBox3, .productBox4, .productBox5,
+.productBox6, .productBox7, .productBox8, .productBox9, .productBox10 {
   margin-top: 30px;
   width: 20%;
   left: 10vw;
   text-align: center;
 }
 
-.productBox img {
+.productBox1 img, .productBox2 img, .productBox3 img, .productBox4 img, .productBox5 img,
+.productBox6 img, .productBox7 img, .productBox8 img, .productBox9 img, .productBox10 img {
   width: 200px;
 }
 
-.productBox p {
+.productBox1 p, .productBox2 p, .productBox3 p, .productBox4 p, .productBox5 p,
+.productBox6 p, .productBox7 p, .productBox8 p, .productBox9 p, .productBox10 p {
   width: 100%;
   font-size: 16px;
   right: 10vw;
   font-weight: bold;
+  font-family: 'Noto Sans TC', sans-serif;
 }
 
 .eatAdd-left {
@@ -1055,8 +1093,74 @@ body a {
   opacity: 1;
 }
 
-.xxoo {
-  right: 100px;
+.lightBoxChild {
+  margin-left: auto;
+  margin-right: auto;
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  bottom: -800px;
+  background-color: #ffffff;
+  overflow: hidden;
+  z-index: 10;
+  -webkit-transition: all .18s ease;
+  -o-transition: all .18s ease;
+  transition: all .18s ease;
+  -webkit-transition: opacity .10s ease;
+  -o-transition: opacity .10s ease;
+  transition: opacity .10s ease;
+}
+
+.lightBoxImg {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  text-align: center;
+}
+
+.lightBox-productBox1 {
+  position: relative;
+  padding-left: 380px;
+  bottom: 10px;
+}
+
+.lightBox-productBox1 img {
+  width: 620px;
+  height: 620px;
+}
+
+.lightBoxText {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  text-align: center;
+}
+
+.lightBox-productText1 {
+  bottom: 70px;
+  right: 10px;
+}
+
+.lightBox-productText1 p {
+  font-size: 60px;
+  font-family: 'Noto Sans TC', sans-serif;
+}
+
+.lightBoxClose {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  position: absolute;
+  bottom: 680px;
+  left: 88%;
+}
+
+.lightBoxClose img {
+  width: 50px;
+}
+
+.detail-bottom {
+  bottom: 20px;
 }
 
 .Active {
@@ -1074,6 +1178,7 @@ body a {
   margin-top: 50px;
   position: absolute;
   text-align: center;
+  font-family: 'Noto Sans TC', sans-serif;
   width: 100%;
   color: #FFF;
   margin-left: auto;
@@ -1081,6 +1186,7 @@ body a {
   font-size: 26px;
   font-size: 26px;
   font-size: 18px;
+  font-family: 'Noto Sans TC', sans-serif;
 }
 
 .blog {
@@ -1099,6 +1205,7 @@ body a {
 
 .blogContent h1 {
   margin-top: 150px;
+  font-family: 'Noto Sans TC', sans-serif;
 }
 
 .blogContent p {
@@ -1108,6 +1215,7 @@ body a {
   font-size: 18px;
   line-height: 25px;
   letter-spacing: 1px;
+  font-family: 'Noto Sans TC', sans-serif;
 }
 
 .blogStyle1 {
@@ -1116,6 +1224,7 @@ body a {
 
 .blogBox1 {
   text-align: center;
+  font-family: 'Noto Sans TC', sans-serif;
 }
 
 .blogBox1 img {
@@ -1148,6 +1257,7 @@ body a {
   text-align: left;
   line-height: 25px;
   letter-spacing: 1px;
+  font-family: 'Noto Sans TC', sans-serif;
   color: black;
 }
 
@@ -1183,6 +1293,7 @@ body a {
   width: 30%;
   display: inline-block;
   vertical-align: top;
+  font-family: 'Noto Sans TC', sans-serif;
   margin: 0px 15px;
   margin-top: 60px;
 }
@@ -1202,6 +1313,7 @@ body a {
   font-size: 17px;
   line-height: 24px;
   color: #fff;
+  font-family: 'Noto Sans TC', sans-serif;
 }
 
 .whereMap {
